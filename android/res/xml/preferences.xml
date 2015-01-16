@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<org.mangler.android.VolumePreference
+	    android:key="xmitvolume"
+	    android:summary="Set microphone input volume level"
+	    android:title="@string/mic_vol_set"/>
+	<CheckBoxPreference
+		android:key="fullscreen"
+		android:summary="Hide the status bar and title bar to increase visible space."
+		android:title="@string/fullscreen"/>
+	<CheckBoxPreference
+		android:key="prevent_sleep"
+		android:summary="Prevent the phone from going into sleep mode while connected to a server. WILL DRAIN BATTERY."
+		android:title="@string/prevent_sleep"/>
+	<CheckBoxPreference
+		android:key="force_8khz"
+		android:summary="Use if transmit sound quality is poor or normal transmitting does not work."
+		android:title="@string/force_8khz"/>
+	<ListPreference
+		android:key="orientation"
+		android:entries="@array/orientationNames"
+		android:entryValues="@array/orientationValues"
+		android:summary="Set the display orientation (i.e. auto, lansdscape, portrait)" 
+		android:title="@string/orientation"/>
+	<ListPreference
+		android:key="charset"
+		android:entries="@array/charsetNames"
+		android:entryValues="@array/charsetValues"
+		android:summary="Changing the character encoding requires re-connecting to the server to take effect." 
+		android:title="@string/charset"/>
+	
+	<PreferenceCategory
+		android:title="@string/pttPreferenceCategoryTitle">>
+		<CheckBoxPreference 
+			android:key="ptt_toggle" 
+			android:summary="Whether the Push-to-Talk button is a toggle button or touch sensitive" 
+			android:title="@string/ptt_button_type" />
+		<CheckBoxPreference 
+			android:key="custom_ptt" 
+			android:summary="Enable custom PTT key" 
+			android:title="@string/custom_ptt" />
+		<org.mangler.android.PTTKeyPreference
+			android:key="ptt_key"
+			android:summary="Set a custom PTT key"
+			android:title="@string/set_ptt" 
+			android:dependency="custom_ptt" />
+		<CheckBoxPreference 
+			android:key="ptt_vibrate" 
+			android:summary="Vibrate when PTT is activated and deactivated" 
+			android:title="@string/ptt_vibrate" />
+	</PreferenceCategory>
+	
+	<PreferenceCategory
+		android:title="@string/ttsPreferenceCategoryTitle">
+		<CheckBoxPreference
+			android:key="enable_ttsLogin"
+			android:summary="Audible notification when a user logs in or out"
+			android:title="@string/enable_ttsLogin"/>
+		<CheckBoxPreference
+			android:key="enable_ttsChannel"
+			android:summary="Audible notification when a user joins/leaves your channel"
+			android:title="@string/enable_ttsChannel"/>
+		<CheckBoxPreference
+			android:key="enable_ttsPage"
+			android:summary="Audible notification when a user sends you a page."
+			android:title="@string/enable_ttsPage"
+			android:defaultValue="true"/>
+	</PreferenceCategory>
+	
+</PreferenceScreen>

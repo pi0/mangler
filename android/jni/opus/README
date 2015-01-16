@@ -1,0 +1,45 @@
+To build from a distribution tarball, you only need to do the following:
+
+% ./configure
+% make
+
+To build from the git repository, the following steps are necessary:
+
+1) Clone the repository:
+
+% git clone git://git.opus-codec.org/opus.git
+% cd opus
+
+1) Compiling
+
+% ./autogen.sh
+% ./configure
+% make
+
+
+Once you have compiled the codec, there will be a opus_demo executable in
+the top directory.
+
+Usage: opus_demo [-e] <application> <sampling rate (Hz)> <channels (1/2)>
+         <bits per second> [options] <input> <output>
+       opus_demo -d <sampling rate (Hz)> <channels (1/2)> [options]
+         <input> <output>
+
+mode: voip | audio | restricted-lowdelay
+options:
+-e                   : only runs the encoder (output the bit-stream)
+-d                   : only runs the decoder (reads the bit-stream as input)
+-cbr                 : enable constant bitrate; default: variable bitrate
+-cvbr                : enable constrained variable bitrate; default: unconstrained
+-bandwidth <NB|MB|WB|SWB|FB> : audio bandwidth (from narrowband to fullband);
+                               default: sampling rate
+-framesize <2.5|5|10|20|40|60> : frame size in ms; default: 20
+-max_payload <bytes> : maximum payload size in bytes, default: 1024
+-complexity <comp>   : complexity, 0 (lowest) ... 10 (highest); default: 10
+-inbandfec           : enable SILK inband FEC
+-forcemono           : force mono encoding, even for stereo input
+-dtx                 : enable SILK DTX
+-loss <perc>         : simulate packet loss, in percent (0-100); default: 0
+
+input and output are little-endian signed 16-bit PCM files or opus bitstreams
+with simple opus_demo proprietary framing.

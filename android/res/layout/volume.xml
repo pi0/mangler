@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="fill_parent"
+	android:orientation="vertical">
+	<SeekBar android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/VolumeBar"
+		android:paddingRight="15dip" android:paddingLeft="15dip"></SeekBar>
+	<RelativeLayout android:id="@+id/RelativeLayout01"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<TextView android:layout_toLeftOf="@+id/VolumeLevel"
+			android:layout_height="wrap_content" android:id="@+id/TextView01"
+			android:layout_width="wrap_content" android:layout_alignParentLeft="true"
+			android:layout_marginLeft="5dip" android:text="Min"></TextView>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/VolumeLevel"
+			android:text="100%" android:layout_centerInParent="true"></TextView>
+		<TextView android:layout_toRightOf="@+id/VolumeLevel"
+			android:layout_height="wrap_content" android:id="@+id/TextView02"
+			android:layout_width="wrap_content" android:text="Max"
+			android:gravity="right" android:layout_alignParentRight="true"
+			android:layout_marginRight="5dip"></TextView>
+	</RelativeLayout>
+
+
+</LinearLayout>

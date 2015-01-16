@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:padding="10dp" 
+    android:gravity="center_vertical">
+
+    <TextView android:id="@+id/indent"
+        android:textSize="16sp"
+        android:typeface="sans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"/>
+
+	<ImageView android:id="@+id/crowimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"/>
+
+    <TextView android:id="@+id/crowtext"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:bufferType="spannable"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./parec | ./gsmenc | ./gsmdec | ./pacat 
+

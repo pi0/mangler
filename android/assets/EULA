@@ -1,0 +1,3 @@
+Mangler for Android will automatically (and without notification) send crash backtraces to our server. 
+The backtrace data and your phone's IP address will be stored on our servers and will be publicly available. 
+If you do not wish to send this information, you will not be able to participate in the alpha/beta process without building the package yourself.

@@ -1,0 +1,110 @@
+mangler (1.2.5) stable; urgency=low Wed, 16 Jan 2013 03:48:57 +0100
+  * Correct version number in about screen. 
+  * Honor $CC in sounds/Makefile. 
+
+mangler (1.2.4) stable; urgency=low Sat, 16 Jun 2012 13:10:10 -0600
+  * fixed a bug which caused mangler to hang when a user does not have a g15 keyboard
+
+mangler (1.2.3) stable; urgency=low Sun, 27 May 2012 14:56:02 -0600
+  * replaced celt with opus libraries
+  * linkified comments and URLS in the user information for android version
+  * fixed chat scrolling in android
+  * fixed private chat window send button upon a reopened session
+
+mangler (1.2.2) stable; urgency=low Sat, 23 Apr 2011 21:52:05 -0600
+  * added an input gain slider on the audio menu
+  * fixed a TTS crash
+  * libventrilo3 should build on windows now (maybe)
+  * should now build cleanly on newer debian/ubuntu systems (gtkmm/dbus include ordering errors)
+
+mangler (1.2.1) stable; urgency=low Sun, 19 Sep 2010 19:26:04 -0700
+  * make the config file save atomic to prevent trashing it if we crash
+  * fixed a bug that prevented displaying all users in the account editor
+  * jukebox has flac, ogg, and mono, and resampling support
+  * add libXi checks into configure for distros that don't like it
+    automatically with GTK
+  * added configure option to only build libventrilo3
+
+mangler (1.2.0) stable; urgency=low Sun, 13 Jun 2010 12:20:22 -0700
+  * fixed some potential buffer overflows in packet processing
+  * added a proper destructor in a futile attempt to close ticket #154 (which
+    sadly remains open)
+  * removed mpd support for music player integration because it doesn't work
+  * modified build system to allow users to disable dbus integration in order
+    to pacify the gentoo users
+  * fixed some channel sorting issues
+  * fixed an issue with resizing the chat window
+  * name column shrinks when long comments/urls are shortened
+  * tooltip for status icon shows master volume level
+  * strip RTF encoding messages from MOTDs
+  * private chat window shows the username you're chatting with
+  * support for ventrilo vuep files for user access templates
+  * only open the mouse device if it isn't open or it changes.  This should fix
+    some "lagging cursor" issues
+  * voice activation automatically starts transmit without requiring any type
+    of PTT.  This should make it more obvious how VA works.
+
+mangler (1.2.0beta1) unstable; urgency=low
+
+  * libventrilo3 should compile on a mac
+  * added admin API functions and UI for:
+     - admin login
+     - admin logout
+     - kick
+     - ban
+     - channelban
+     - force channel move
+     - user editor
+     - channel editor
+     - server property editor
+     - rank list editor
+     - ban list editor
+  * added master volume control
+  * added accessibility support for orca users
+  * buttons can be hidden to reduce screen space
+  * user's "server settings" are sent to the server (allow pages, chat,
+    recording, etc)
+  * chat RCON support
+  * save per-user volume settings in the config file
+  * save channel passwords in the config file
+  * right click conext menu on channel list for kick, ban, phantoms, private
+    chat, user settings, etc.
+  * implement channel and user flags for local mute, global mute, and many
+    others
+  * implement rank list support
+  * ALSA support
+  * OSS support
+  * allow custom device names/devices for ALSA and OSS
+  * track the amount of data xmit'd/recv'd
+  * libxosd support for on-screen display (overlay)
+  * mute sound/mic checkboxes on main ui screen
+  * input VU meter on main ui screen
+  * ability to set default channel at login
+  * all buttons have corresponding menu items
+  * ping and current # of users are shown in status bar
+  * add rhythmbox (and maybe mpd and amarok) support to show current playing track
+  * main window should always come to foreground when deiconifying from the system tray
+  * added celt support (only for mangler... does not work with normal ventrilo client)
+  * implemented voice activated transmit
+  * implemented "vrf" recording and playback capability
+  * impelmented a much better configuration file format (existing config is
+    automatically converted)
+  * status icon has a context menu when right clicking
+  * ticket #154 is still open
+  * basic text-to-speech implementation
+  * implemented user paging
+
+ -- eric kilfoil <ekilfoil@gmail.com>  Sun, 09 May 2010 00:27:04 -0700
+
+mangler (1.0.1) stable; urgency=low
+
+  * Updating license documentation and distribution for compliance
+
+ -- eric kilfoil <ekilfoil@gmail.com>  Tue, 22 Dec 2009 21:42:48 -0800
+
+mangler (1.0.0) stable; urgency=low
+
+  * Initial release
+
+ -- eric kilfoil <ekilfoil@gmail.com>  Tue, 01 Dec 2009 06:43:59 -0700
+

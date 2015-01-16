@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent">
+	
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent" 
+		android:paddingLeft="10dp" android:paddingBottom="10dp" android:paddingRight="15dp" android:paddingTop="10dp">
+		
+		<TextView 
+			android:text="@string/server_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		
+		<EditText android:id="@+id/editServer" 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:hint="Server Name"
+			android:inputType="textPersonName"/>
+		
+		<TextView 
+			android:text="@string/hostname"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			
+		<EditText android:id="@+id/editHost" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="Host Name or IP Address"
+			android:inputType="textUri"/>
+		
+		<TextView 
+			android:text="@string/port_number"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			
+		<EditText android:id="@+id/editPort" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:hint="Port Number"
+			android:inputType="number"/>
+		
+		<TextView 
+			android:text="@string/password"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+			
+		<EditText android:id="@+id/editPass" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:hint="Password"
+			android:maxLength="31" android:inputType="textVisiblePassword"/>
+		
+		<TextView 
+			android:text="@string/user_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		
+		<EditText android:id="@+id/editUser" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="User Name"
+			android:maxLength="31" android:inputType="textPersonName"/>
+		
+		<TextView 
+			android:text="@string/phonetic"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		
+		<EditText android:id="@+id/editPhonetic" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:maxLength="31"
+			android:hint="Phonetic"
+			android:inputType="textPhonetic"/>
+		
+	
+<LinearLayout android:id="@+id/LinearLayout01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="5dp" android:layout_gravity="right"><Button android:id="@+id/editSave" android:text="@string/save" android:layout_height="wrap_content" android:width="100dp" android:layout_width="wrap_content"/><Button android:layout_height="wrap_content" android:id="@+id/editCancel" android:text="@string/cancel" android:layout_width="wrap_content" android:width="100dp"></Button></LinearLayout>
+</LinearLayout>
+</ScrollView>

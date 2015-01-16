@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+     <TextView android:id="@+id/slistusername"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="fill_parent"
+    	android:paddingTop="6dp" 
+    	android:paddingBottom="6dp"
+    	android:paddingLeft="2dp"
+    	android:paddingRight="2dp"
+    	android:height="50dp"
+    	android:gravity="center_vertical"
+    	android:textSize="14sp" 
+    	android:typeface="sans">
+    </TextView>
+     <TextView android:id="@+id/atsign"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="fill_parent"
+    	android:paddingTop="6dp" 
+    	android:paddingBottom="6dp"
+    	android:paddingLeft="2dp"
+    	android:paddingRight="2dp"
+    	android:height="50dp"
+    	android:gravity="center_vertical"
+    	android:textSize="14sp" 
+    	android:typeface="sans"
+    	android:text="\@">
+    </TextView>
+	<TextView android:id="@+id/slistservername"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="wrap_content"
+    	android:layout_height="fill_parent"
+    	android:paddingTop="6dp" 
+    	android:paddingBottom="6dp"
+    	android:paddingLeft="2dp"
+    	android:paddingRight="2dp"
+    	android:height="50dp"
+    	android:gravity="center_vertical"
+    	android:textSize="14sp" 
+    	android:textStyle="bold" 
+    	android:typeface="sans"
+    	android:ellipsize="end">
+	</TextView>
+</LinearLayout>

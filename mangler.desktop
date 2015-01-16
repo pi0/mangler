@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Mangler
+GenericName=VOIP Client
+Comment=Voice chat on Ventrilo 3.x servers
+Exec=mangler
+Icon=mangler_logo
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Network;
+X-Ubuntu-Gettext-Domain=mangler
+
