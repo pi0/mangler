@@ -2,6 +2,10 @@ These instructions are only valid from Android NDK Revision 4 and up.
 
 To run Mangler for Android, you will need to have libventrilo built with the Android NDK.
 
+There is a precomiled version one for armeabi in libs directory
+
+In order to build it :
+
 LINUX USERS (you will need subversion installed):
 mkdir -p ~/src/mangler-droid
 cd ~/src/mangler-droid
