@@ -46,3 +46,7 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+
+# Android files
+android/gen
+android/out
