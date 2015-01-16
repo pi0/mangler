@@ -900,6 +900,8 @@ public class ServerView extends TabActivity {
         }
         Button pttButton = ((Button) findViewById(R.id.talkButton));
         pttButton.setPressed(false);
+        ToggleButton toggle = ((ToggleButton) findViewById(R.id.talkToggleButton));
+        toggle.setChecked(false);
         Recorder.stop();
         Player.setVolume(1.0f);
         ((ImageView) findViewById(R.id.transmitStatus)).setImageResource(R.drawable.xmit_off);
