@@ -1,130 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
-		android:id="@android:id/tabhost"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent">
-		
-	<LinearLayout android:orientation="vertical"
-		android:layout_width="fill_parent" 
-		android:layout_height="fill_parent" 
-		android:padding="5dp">
-		
-		<LinearLayout android:orientation="vertical"
-		android:layout_width="fill_parent" 
-		android:layout_height="0dp" 
-		android:layout_weight=".85" >
-		
-		<TabWidget android:id="@android:id/tabs" 
-			android:layout_width="fill_parent" 
-			android:layout_height="wrap_content"/>
-			
-		<FrameLayout android:layout_width="fill_parent" 
-			android:layout_height="fill_parent" 
-			android:padding="0dp" 
-			android:id="@android:id/tabcontent">
-		
-			<LinearLayout android:layout_width="wrap_content" 
-				android:layout_height="wrap_content" 
-				android:id="@+id/channelView"
-				android:orientation="vertical">
-				
-				<ListView android:layout_width="fill_parent"
-			       	android:layout_height="fill_parent" 
-			       	android:isScrollContainer="true"
-			       	android:id="@+id/channelList"
-			       	android:cacheColorHint="#00000000"/>
-			       	 
-			</LinearLayout>
-			
-			<LinearLayout android:layout_width="wrap_content" 
-				android:layout_height="wrap_content" 
-				android:id="@+id/userView"
-				android:orientation="vertical">
-				
-				<TextView
-					android:id="@+id/userViewHeader"
-					android:background="#3f3f3f"
-					android:text="0 Users | Channel Name"
-					android:textColor="#ffffff"
-					android:textStyle="bold"
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:padding="5dp"
-					android:layout_marginLeft="0dp"
-					android:layout_marginRight="0dp"
-					android:layout_marginTop="0dp"
-					android:singleLine="true"
-					android:ellipsize="end"
-					/>
-					
-			    <ListView android:layout_width="fill_parent"
-			       	android:layout_height="fill_parent" 
-			       	android:isScrollContainer="true"
-			       	android:id="@+id/userList"
-			       	android:cacheColorHint="#00000000"/>
-				
-			</LinearLayout>
+         android:id="@android:id/tabhost"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent">
 
-			<LinearLayout android:layout_width="fill_parent" 
-				android:layout_height="fill_parent" 
-				android:id="@+id/chatView" 
-				android:orientation="vertical">
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:padding="5dp">
 
-				<ScrollView android:id="@+id/chatScroll" 
-					android:layout_height="wrap_content" 
-					android:layout_weight="1" 
-					android:layout_width="fill_parent" 
-					android:scrollbars="vertical" 
-					android:scrollbarAlwaysDrawVerticalTrack="true" 
-					android:layout_marginBottom="10px">
-					
-						<TextView android:id="@+id/messages" 
-							android:text="* Press menu to join or leave the chat room." 
-							android:layout_height="wrap_content" 
-							android:layout_width="wrap_content"/>
-						
-				</ScrollView>
-				
-				<EditText android:id="@+id/message" 
-					android:layout_height="wrap_content" 
-					android:layout_width="fill_parent" 
-					android:enabled="false" android:imeOptions="actionSend"/>
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="0dp"
+                      android:layout_weight=".85">
 
-			</LinearLayout>
-			
-			<LinearLayout android:id="@+id/talkView"
-				xmlns:android="http://schemas.android.com/apk/res/android"
-			    android:orientation="vertical"
-			    android:visibility="gone"
-			    android:layout_width="fill_parent"
-			    android:layout_height="fill_parent" 
-			    android:gravity="center_vertical|center_horizontal">
-				
-				<TextView android:text="Last Xmit Info\n\nChannel Rate: N/A\nRecord Rate: N/A\nMin Buffer Size: N/A\n"
-					android:id="@+id/recorderInfo"
-					android:layout_width="fill_parent"
-					android:layout_height="wrap_content"
-					android:gravity="top|left" />
-				<ImageView android:id="@+id/transmitStatus"
-					android:layout_height="30px"
-					android:layout_width="30px"
-					android:src="@drawable/transmit_off"
-					android:layout_marginTop="15dp"
-					android:layout_marginBottom="15dp"/>
-					
-			</LinearLayout>
-			
-		</FrameLayout>
-		
-		</LinearLayout>
+            <TabWidget android:id="@android:id/tabs"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"/>
 
-		<Button 
-		android:layout_height="0dp"
-		android:layout_weight=".15" 
-		android:layout_width="fill_parent" 
-		android:id="@+id/talkButton"
-		android:text="@string/push_to_talk"/>
+            <FrameLayout android:layout_width="fill_parent"
+                         android:layout_height="fill_parent"
+                         android:padding="0dp"
+                         android:id="@android:id/tabcontent">
 
-	</LinearLayout>
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/channelView"
+                              android:orientation="vertical">
+
+                    <ListView android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:isScrollContainer="true"
+                              android:id="@+id/channelList"
+                              android:cacheColorHint="#00000000"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:id="@+id/userView"
+                              android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/userViewHeader"
+                            android:background="#3f3f3f"
+                            android:text="0 Users | Channel Name"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="0dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            />
+
+                    <ListView android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:isScrollContainer="true"
+                              android:id="@+id/userList"
+                              android:cacheColorHint="#00000000"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:id="@+id/chatView"
+                              android:orientation="vertical">
+
+                    <ScrollView android:id="@+id/chatScroll"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_width="fill_parent"
+                                android:scrollbars="vertical"
+                                android:scrollbarAlwaysDrawVerticalTrack="true"
+                                android:layout_marginBottom="10px">
+
+                        <TextView android:id="@+id/messages"
+                                  android:text="* Press menu to join or leave the chat room."
+                                  android:layout_height="wrap_content"
+                                  android:layout_width="wrap_content"/>
+
+                    </ScrollView>
+
+                    <EditText android:id="@+id/message"
+                              android:layout_height="wrap_content"
+                              android:layout_width="fill_parent"
+                              android:enabled="false" android:imeOptions="actionSend"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/talkView"
+                              xmlns:android="http://schemas.android.com/apk/res/android"
+                              android:orientation="vertical"
+                              android:visibility="gone"
+                              android:layout_width="fill_parent"
+                              android:layout_height="fill_parent"
+                              android:gravity="center_vertical|center_horizontal">
+
+                    <TextView
+                            android:text="Last Xmit Info\n\nChannel Rate: N/A\nRecord Rate: N/A\nMin Buffer Size: N/A\n"
+                            android:id="@+id/recorderInfo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|left"/>
+                    <ImageView android:id="@+id/transmitStatus"
+                               android:layout_height="30px"
+                               android:layout_width="30px"
+                               android:src="@drawable/transmit_off"
+                               android:layout_marginTop="15dp"
+                               android:layout_marginBottom="15dp"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" android:weightSum="1" android:rowCount="3" android:columnCount="3">
+
+            <Button
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight=".70"
+                    android:id="@+id/talkButton"
+                    android:text="@string/push_to_talk"
+                    />
+
+            <ToggleButton
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:id="@+id/talkToggleButton"
+                    android:text="@string/push_to_talk"
+                    android:textOff="Start talk"
+                    android:textOn="Stop talk" android:checked="false"
+                    />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </TabHost>
