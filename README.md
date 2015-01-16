@@ -12,6 +12,11 @@ Mangler is an open source VOIP client capable of connecting to Ventrilo 3.x serv
 
 This project was forked by pi0 (pooya parsa) from version 1.2.5 to github
 
+
+# How to get
+as a quick start you can get apk builds from [here](http://pi0.ir/files/dl/mangler/apk/)
+
+
 # Why?
 
 Our project’s motto is: “No one should use our software… ever”
